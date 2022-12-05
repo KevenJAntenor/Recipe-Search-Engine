@@ -8,7 +8,7 @@ Le projet est un programme en C qui permet de faire une recherche de recettes da
 
 - Andy Edzo Nkily (EDZA23039901)
 - Keven Jude Antenor
-- Andy Scott Ekoue Messan
+- Ekoue Andy Scott Messan (MESE65110306)
 
 ## Fonctionnement
 
