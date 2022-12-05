@@ -7,7 +7,7 @@ Le projet est un programme en C qui permet de faire une recherche de recettes da
 ## Auteurs
 
 - Andy Edzo Nkily (EDZA23039901)
-- Keven Jude Antenor
+- Keven Jude Antenor (ANTK08129003)
 - Ekoue Andy Scott Messan (MESE65110306)
 
 ## Fonctionnement
