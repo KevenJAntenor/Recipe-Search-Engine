@@ -1,0 +1,9 @@
+# executable
+recherche
+
+# artéfacts de compilation
+*.o
+*.out
+
+# Autres fichiers temporaires
+*.swp
