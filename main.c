@@ -1,6 +1,11 @@
-#include <stdio.h>
+#include "main.h"
 
 int main(int argc, char *argv[]){
-   printf("Hello THE WORLLLRRRDDDDD!!!!!\n");
+   verifier_arguments(argc,argv);
    return 0;
 }
+
+void verifier_arguments(int argc, char *argv[]){
+    printf("verification des arguments\n");
+}
+
