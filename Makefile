@@ -25,4 +25,3 @@ test: unitaire integrations
 integrations:
 
 unitaire:
-

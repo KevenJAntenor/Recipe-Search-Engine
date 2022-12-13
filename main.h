@@ -1,8 +1,11 @@
 #include <stdio.h>
 
 #include "erreur.h"
+#include "string.h"
+
 
 #define MSG_ERR_NB_ARGS "Nombre d'arguments invalide"
+#define MSG_ARGS_INVALIDE "Arguments invalides"
 
 
 int main(int argc, char *argv[]);
@@ -22,3 +25,16 @@ void verifier_arguments(int argc, char *argv[]);
  */
 void verifier_nb_arguments(int nb_arguments);
 
+
+/**
+ * Verifie si le fichier de banque de donnee existe
+ * @param nom_fichier_banque[]: nom du fichier
+ */
+void verifier_fichier_banque(char nom_fichier_banque[]);
+
+/**
+ * Verifie les options 
+ * @param nb_arguments: nombre d'arguments
+ * @param arguments: tableau d'arguments
+ */
+void verifier_options(char *arguments[]);
