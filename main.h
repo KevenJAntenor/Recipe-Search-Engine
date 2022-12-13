@@ -1,8 +1,7 @@
 #include <stdio.h>
+#include <string.h>
 
 #include "erreur.h"
-#include "string.h"
-
 
 #define MSG_ERR_NB_ARGS "Nombre d'arguments invalide"
 #define MSG_ARGS_INVALIDE "Arguments invalides"

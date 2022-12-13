@@ -3,7 +3,7 @@ CC_OPTS = -Wall
 EXE = recherche
 
 .SUFFIXES = .h .c .o
-OBJS = main.o error.o 
+OBJS = main.o erreur.o 
 
 all: clean build
 
