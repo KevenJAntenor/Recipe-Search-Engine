@@ -2,8 +2,8 @@ CC = gcc
 CC_OPTS = -Wall
 EXE = recherche
 
-.SUFFIXES = .c .h .o
-OBJS = main.o
+.SUFFIXES = .h .c .o
+OBJS = main.o error.o 
 
 all: clean build
 
@@ -25,3 +25,4 @@ test: unitaire integrations
 integrations:
 
 unitaire:
+
