@@ -1,5 +1,6 @@
-# executable
+# executables
 recherche
+recherche_test
 
 # artéfacts de compilation
 *.o
@@ -7,3 +8,4 @@ recherche
 
 # Autres fichiers temporaires
 *.swp
+.*
