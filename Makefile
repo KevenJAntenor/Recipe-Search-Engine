@@ -5,7 +5,7 @@ EXE_TEST = recherche_test
 
 .SUFFIXES = .h .c .o
 OBJS = main.o erreur.o list.o
-OBJS_TESTS = main_test.o
+OBJS_TESTS = main_test.o list_test.o list.o
 
 all: clean build
 
@@ -24,9 +24,9 @@ compile: $(OBJS)
 	$(CC)  $(CC_OPTS) -c $*.c
 
 test: build_test
-	rm -f main_test.o
+	rm -f *test.o
 	./recherche_test
 
 build_test: $(OBJS_TESTS)
-	$(CC) $^ -o $(EXE_TEST)
+	$(CC) $^ -lcunit -o $(EXE_TEST)
 	
