@@ -24,19 +24,68 @@ struct liste_categories {
    struct categorie *categories;
 };
 
+// Méthodes des recettes
 
-int compare_recette(struct recette *recette1,struct recette *recette2);
+/**
+ * Initialise une recette en mémoire
+ * @param nom_recette Le nom de la recette
+ * @return struct recette* : une recette
+ */
+struct recette *initialiser_recette(char *nom_recette);
 
-int compare_categorie(struct categorie *categorie1, struct categorie *categorie2);
+/**
+ * Compare deux recettes selon l'ordre lexicographique de leurs noms
+ * @param recette la recette comparante
+ * @param autre_recette la recette comparée
+ * @return un nombre inferieur à 0 si plus petit, supérieur à 0 si
+ * plus grand sinon 0 si égal
+ */
+int comparer_recettes(struct recette *recette,struct recette *autre_recette);
 
-struct categorie *initialiser_categorie(char *nom_recette);
 
-struct categorie *initiliser_recette(char *nom_categorie);
+// Méthodes des listes de recettes
 
-struct liste_categories *initialiser_liste_categories();
+/**
+ * Initialise en mémoire une liste chanée de recettes
+ * @return struct liste_recettes* : une liste chainée de recettes vide
+*/
+struct liste_recettes *initialiser_liste_recettes(void);
 
-struct liste_recettes *initialiser_liste_recettes();
-
+/**
+ * Ajoute une recette dans une liste de recettes
+ * @param recette la recette à ajouter
+ * @param liste_recettes la liste de recettes
+*/
 void ajouter_recette(struct recette *recette, struct liste_recettes *liste_recettes);
 
+
+// Méthodes des catégories
+
+/**
+ * Initialise une categorie en mémoire
+ * @param nom_categorie Le nom de la categorie
+ * @return struct categorie* : une categorie vide
+ */
+struct categorie *initialiser_categorie(char *nom_categorie);
+
+/**
+ * Compare deux categories selon l'ordre lexicographique de leurs noms
+ * @param recette la categorie comparante
+ * @param autre_recette la categorie comparée
+ * @return un nombre inferieur à 0 si plus petit, supérieur à 0 si
+ * plus grand sinon 0 si égal
+ */
+int compare_categorie(struct categorie *categorie, struct categorie *autre_categorie);
+
+/**
+ * Initialise en mémoire une liste chanée de catégories
+ * @return struct liste_recettes* : une liste chainée de recettes vide
+*/
+struct liste_categories *initialiser_liste_categories();
+
+/**
+ * Ajoute une categorie dans une liste de categories
+ * @param categorie la categorie à ajouter
+ * @param liste_categories la liste des categories
+*/
 void ajouter_categorie(struct categorie *categorie, struct liste_categories *liste_categories);
