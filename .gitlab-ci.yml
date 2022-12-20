@@ -4,7 +4,7 @@ before_script:
     - mkdir -p /tmp/local
     - bash /tmp/bats/install.sh /tmp/local
     - export PATH=$PATH:/tmp/local/bin
-    - apt-get install libcunit1-dev -y
+    - apt-get install libcunit1 libcunit1-doc libcunit1-dev --force-yes
 
 build:
     stage: build
