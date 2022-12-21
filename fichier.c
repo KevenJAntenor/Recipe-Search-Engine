@@ -32,8 +32,7 @@ void viderTab(char *tabAVider){
     }
 }
 
-char *trouver_nom_recette(char *ligne){
-   char nomRecette[100] = "" ;
+char *trouver_nom_recette(char *ligne, char *nomRecette){
    int k = 0 , index = 0;
    while(ligne[index] != '['){
       nomRecette[k] = ligne[index] ;
@@ -42,14 +41,13 @@ char *trouver_nom_recette(char *ligne){
    return nomRecette ;
 }
 
-char *trouver_nom_categorie(char *ligne, int index){
-   char nomCategorie[50] = "" ;
+char *trouver_nom_categorie(char *ligne, int *index, char *nomCategorie){
    int j = 0 ; index++;
-   while(ligne[index] != ']'){
-      nomCategorie[j] = ligne[index] ;
+   while(ligne[*index] != ']'){
+      nomCategorie[j] = ligne[*index] ;
       index++;j++;
    }
-   index++;
+   *index++;
    return nomCategorie ;
 }
 
@@ -64,11 +62,11 @@ void manipuler_ligne(struct liste_categories *liste_categorie , char *ligne){
    int i = 0 ;
    char nomRecette[100] = "" , nomCategorie[50] = "" ;
    while(ligne[i] != '\0' && ligne[i] != '\n'){
-      strcpy(nomRecette,trouver_nom_recette(ligne)) ;
+      strcpy(nomRecette,trouver_nom_recette(ligne,(char *)&nomRecette)) ;
       if(ligne[i] == '['){
-         strcpy(nomCategorie,trouver_nom_categorie(ligne,&i)) ;
+         strcpy(nomCategorie,trouver_nom_categorie(ligne,(int *)&i,(char *)&nomCategorie)) ;
          remplir_liste_categorie(liste_categorie,nomRecette,nomCategorie) ;
-      } viderTab(nomCategorie) ; viderTab(nomRecette) ;
+      } viderTab((char *)&nomCategorie) ; viderTab((char *)&nomRecette) ;
       i++;
    }
 }
@@ -78,7 +76,7 @@ struct liste_categories *lire_fichier(char *nom_fichier) {
    struct liste_categories *liste_categorie = initialiser_liste_categories();
    ouvrirFichier(leFichier) ;
    while(fgets(ligne,1000,leFichier) != NULL){
-      manipuler_ligne(&liste_categorie,ligne) ;
+      manipuler_ligne((struct liste_categories *)&liste_categorie,ligne) ;
    }
    fermerFichier(leFichier) ;
    return liste_categorie ;
