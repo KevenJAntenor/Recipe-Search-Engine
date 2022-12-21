@@ -47,6 +47,37 @@ void ouvrirFichier(FILE *fichier);
 void fermerFichier(FILE *leFichier) ;
 
 /**
+ * Manipule une ligne du fichier
+ * @param liste_categorie la liste de categories
+ * @param ligne la ligne du fichier
+*/
+void manipuler_ligne(struct liste_categories *liste_categorie , char *ligne) ;
+
+/**
+ * Remplit la liste de categories
+ * @param liste_categorie la liste de categories
+ * @param nomRecette le nom de la recette
+ * @param nomCategorie le nom de la categorie
+*/
+void remplir_liste_categorie(struct liste_categories *liste_categorie, char *nomRecette , char *nomCategorie) ;
+
+/**
+ * Trouve le nom de la recette
+ * @param ligne la ligne du fichier
+ * @param nomRecette le nom de la recette
+ * @return nom de la recette
+*/
+char *trouver_nom_recette(char *ligne, char *nomRecette) ;
+
+/**
+ * Trouver le nom de la categorie
+ * @param ligne la ligne du fichier
+ * @param nomCategorie le nom de la categorie
+ * @return nom de la categorie
+*/
+char *trouver_nom_categorie(char *ligne, int *index, char *nomCategorie) ;
+
+/**
  * Genere la liste des categories
  * @param nom_fichier nom du fichier
  * @return struct liste_categories * : la liste des categories
