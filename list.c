@@ -11,6 +11,7 @@ struct liste_recettes *initialiser_liste_recettes(){
    struct liste_recettes *new_liste_recettes = (struct liste_recettes*) malloc(sizeof(struct liste_recettes));
    new_liste_recettes->nb_recettes = 0;
    new_liste_recettes->recettes = NULL;
+   return new_liste_recettes;
 }
 
 struct categorie *initialiser_categorie(char *nom_categorie){
@@ -24,4 +25,5 @@ struct liste_categories *initialiser_liste_categories(){
    struct liste_categories *new_liste_categories = (struct liste_categories*) malloc(sizeof(struct liste_categories));
    new_liste_categories->nb_categories = 0;
    new_liste_categories->categories = NULL;
+   return new_liste_categories;
 }
