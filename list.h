@@ -58,6 +58,13 @@ struct liste_recettes *initialiser_liste_recettes(void);
 */
 void ajouter_recette(struct recette *recette, struct liste_recettes *liste_recettes);
 
+/**
+ * Trouve la position ou ajouter une recette
+ * @param nom_recette le nom de la recette a ajouter
+ * @param liste_recettes la liste de recettes
+*/
+int trouver_position_recette(char *nom_recette, struct liste_recettes *liste_recettes);
+
 
 // Méthodes des catégories
 
@@ -75,7 +82,7 @@ struct categorie *initialiser_categorie(char *nom_categorie);
  * @return un nombre inferieur à 0 si plus petit, supérieur à 0 si
  * plus grand sinon 0 si égal
  */
-int compare_categorie(struct categorie *categorie, struct categorie *autre_categorie);
+int comparer_categories(struct categorie *categorie, struct categorie *autre_categorie);
 
 /**
  * Initialise en mémoire une liste chanée de catégories
@@ -89,3 +96,27 @@ struct liste_categories *initialiser_liste_categories();
  * @param liste_categories la liste des categories
 */
 void ajouter_categorie(struct categorie *categorie, struct liste_categories *liste_categories);
+
+/**
+ * Inserer une recette dans une liste a une position donnee
+ * @param recette recette a ajouter
+ * @param position poisition ou ajouter
+ * @param liste_recettes la liste de recettes ou ajouter la recette
+*/
+void inserer_recette(struct recette *recette, int position, struct liste_recettes *liste_recettes);
+
+/**
+ * Trouve la position ou ajouter une categorie
+ * @param nom_categorie le nom de la categorie a ajouter
+ * @param liste_categories la liste des categories
+*/
+int trouver_position_categorie(char *nom_categorie, struct liste_categories *liste_categories);
+
+
+/**
+ * Inserer une categorie dans une liste a une position donnee
+ * @param categorie categorie a ajouter
+ * @param position poisition ou ajouter
+ * @param liste_categories la liste de catefories ou ajouter la recette
+*/
+void inserer_categorie(struct categorie *categorie, int position, struct liste_categories *liste_categories);
