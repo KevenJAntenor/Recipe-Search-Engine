@@ -50,7 +50,8 @@ void inserer_recette(struct recette *recette, int position, struct liste_recette
    if (position == 0){
       liste_recettes->recettes = recette;
    } else {
-      for (unsigned int i = 0; i < position; i++){
+      unsigned int i;
+      while ( i++ < position){
          courant = courant->suivant;
       }
       recette->suivant = courant->suivant;
@@ -87,7 +88,8 @@ void inserer_categorie(struct categorie *categorie, int position, struct liste_c
    if (position == 0){
       liste_categories->categories = categorie;
    } else {
-      for (unsigned int i = 0; i < position; i++){
+      unsigned int i;
+      while ( i++ < position){
          courant = courant->suivant;
       }
       categorie->suivant = courant->suivant;
