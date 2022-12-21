@@ -47,6 +47,13 @@ void ouvrirFichier(FILE *fichier);
 void fermerFichier(FILE *leFichier) ;
 
 /**
+ * Verifie si le fichier existe
+ * @param nomDuFichier le nom du fichier
+ * @return est fichier ou pas
+*/
+bool est_fichier(char *nomDuFichier) ;
+
+/**
  * Manipule une ligne du fichier
  * @param liste_categorie la liste de categories
  * @param ligne la ligne du fichier

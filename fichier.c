@@ -17,6 +17,12 @@ void ouvrirFichier(FILE *fichier){
    }
 }
 
+bool est_fichier(char *nomDuFichier){
+   FILE *fichier = fopen(nomDuFichier,"r");
+   if(fichier == NULL) return false ;
+   else { fclose(fichier) ; return true ;} ;
+}
+
 void fermerFichier(FILE *leFichier){
    if(fclose(leFichier) == EOF){
       printf("Erreur lors de la fermeture du fichier.\n") ;
