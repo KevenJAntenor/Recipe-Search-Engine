@@ -20,7 +20,9 @@ void verifier_nb_arguments(int nb_arguments){
 }
 
 void verifier_fichier_banque(char nom_fichier_banque[]) {
-   // TODO: verifier si le fichier existe depuis le module fichier
+   if(!est_fichier(nom_fichier_banque)){
+      stop(FICHIER,MSG_FICHIER_INVALIDE) ;
+   }
 }
 
 void verifier_options(char *arguments[]){
