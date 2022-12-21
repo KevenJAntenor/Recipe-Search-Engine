@@ -1,5 +1,5 @@
 CC = gcc
-CC_OPTS = -Wall
+CC_OPTS = -Wall -std=c11
 EXE = recherche
 EXE_TEST = recherche_test
 
