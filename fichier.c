@@ -25,11 +25,13 @@ void fermerFichier(FILE *leFichier){
 }
 
 void viderTab(char *tabAVider){
-    for(int i = 0 ; i < strlen(tabAVider) ; i++) {
-        if(tabAVider[i] != 0){
+   int i = 0 ;
+   while(i < strlen(tabAVider)){
+      if(tabAVider[i] != 0){
             tabAVider[i] = '\0' ;
         }
-    }
+      i++ ;
+   }
 }
 
 char *trouver_nom_recette(char *ligne, char *nomRecette){
