@@ -28,5 +28,13 @@ unsigned int compter_nb_lignes(FILE *fichier);
 
 unsigned int compter_nb_mots_sans_doublons(FILE *fichier);
 
+unsigned int compter_nb_mots_avec_doublons(FILE *fichier);
+
+char trouver_lettre_plus_frequente(FILE *fichier);
+
+void gnerer_depuis_liste(struct liste_categories categories,struct stats *statistiques);
+
+
+
 
 
