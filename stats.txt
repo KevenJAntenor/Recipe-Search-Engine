@@ -1,0 +1,9 @@
+Nombre de lignes dans le fichier d'entrée: 6
+Nombre de mots sans doublons: 0
+Nombre de mots avec doublons: 0
+Lettre la plus fréquente: A
+Nombre de catégories: 11
+Nombre de recettes: 1
+Catégorie la plus populaire: 
+Catégorie qui a le plus grand nombre de recettes: 
+Recette la plus longue (en termes de nombre de caractères): 

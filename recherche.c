@@ -2,6 +2,7 @@
 
 void rechercher_par_categorie(struct liste_categories *categories, char *critereDeRecherche){
     struct categorie *temp = categories->categories ; int i = 0 ; bool recherche = true ;
+
     while(i < categories->nb_categories && recherche ){
         if(strstr(critereDeRecherche,temp->nom_categorie) != NULL) {
             afficher_categorie(temp) ;
@@ -66,6 +67,7 @@ int compter_nombre_espaces(char *chaineDeCaractere){
         if(chaineDeCaractere[i] == ' '){
             nb++ ;
         }
+        i++;
     }
     return nb ;
 }
@@ -87,6 +89,7 @@ void lancer_recherche(struct liste_categories *categories){
         printf("Entrez votre critère de recherche(ou sinon 'q' pour quitter) :") ;
         scanf("%s",(char *)&critereDeRecherche) ;
         traiter_entree_de_utilisateur(critereDeRecherche) ;
+        
         if (strcmp(critereDeRecherche,"q") != 0){
            if(compter_nombre_espaces(critereDeRecherche) >= 0 && compter_nombre_espaces(critereDeRecherche) < 2){
                if(compter_nombre_espaces(critereDeRecherche) == 0) rechercher_par_categorie(categories,critereDeRecherche) ;

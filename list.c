@@ -108,6 +108,7 @@ void afficher_categorie(struct categorie *categorie){
    struct recette *courant = categorie->recettes->recettes;
    while(courant != NULL){
       printf("%s\n",courant->nom_recette);
+      courant = courant->suivant;
    }
    printf(".\n");
 }
