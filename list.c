@@ -18,7 +18,8 @@ struct categorie *initialiser_categorie(char *nom_categorie){
    struct categorie *new_categorie = (struct categorie*) malloc(sizeof(struct categorie));
    new_categorie->nom_categorie = nom_categorie;
    new_categorie->suivant = NULL;
-   new_categorie->recettes = initialiser_liste_recettes();
+   new_categorie->recettes  = initialiser_liste_recettes();
+   return new_categorie;
 }
 
 struct liste_categories *initialiser_liste_categories(){
