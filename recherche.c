@@ -71,9 +71,12 @@ int compter_nombre_espaces(char *chaineDeCaractere){
 }
 
 void traiter_entree_de_utilisateur(char *critereDeRecherche){
-    char *critere ;
+    char *critere ; int i = 0 ;
     strcpy(critere,enleve_espace_milieu(enleve_espace_deb_fin(critereDeRecherche))) ;
-    for(int i = 0; i < strlen(critere); i++) critere[i] = tolower(critere[i]) ;
+    while(i < strlen(critere)) {
+        critere[i] = tolower(critere[i]) ;
+        i++ ;
+    } 
     strcpy(critereDeRecherche,critere) ;
 }
 
