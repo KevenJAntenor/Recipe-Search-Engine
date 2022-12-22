@@ -3,6 +3,7 @@
 int main(int argc, char *argv[]){
    verifier_arguments(argc,argv);
    struct liste_categories *categories = lire_fichier(argv[1]);
+   printf("%d\n",categories->nb_categories);
    return 0;
 }
 

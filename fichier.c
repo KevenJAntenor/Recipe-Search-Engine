@@ -60,16 +60,10 @@ char *trouver_nom_categorie(char *ligne, int index, char nomCategorie[50]){
 
 void remplir_liste_categorie(struct liste_categories *liste_categorie, char *nomRecette , char *nomCategorie){
    struct recette *recette = creerRecette(nomRecette) ;
-   struct categorie *categorie = creerCategorie(nomCategorie) , *temp = liste_categorie->categories ; 
-   int i = 0 ;
-   while(i < liste_categorie->nb_categories){
-      if(comparer_categories(categorie,temp) != 0){
+   struct categorie *categorie = creerCategorie(nomCategorie);
+
          ajouter_recette(recette,(categorie->recettes)) ; 
          ajouter_categorie(categorie,liste_categorie) ;
-      }
-      temp = temp->suivant ;
-      i++ ;
-   }
 }
 
 void manipuler_ligne(struct liste_categories *liste_categorie , char *ligne){
