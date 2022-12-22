@@ -2,9 +2,11 @@
 #include <string.h>
 
 #include "erreur.h"
+#include "fichier.h"
 
 #define MSG_ERR_NB_ARGS "Nombre d'arguments invalide"
 #define MSG_ARGS_INVALIDE "Arguments invalides"
+#define MSG_FICHIER_INVALIDE "Fichier invalide"
 
 
 int main(int argc, char *argv[]);
