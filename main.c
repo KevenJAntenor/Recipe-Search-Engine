@@ -2,6 +2,7 @@
 
 int main(int argc, char *argv[]){
    verifier_arguments(argc,argv);
+   struct liste_categories *categories = lire_fichier(argv[1]);
    return 0;
 }
 
