@@ -4,7 +4,9 @@
 #include <ctype.h>
 #include <stdbool.h>
 
+#ifndef LIST
 #include "list.h"
+#endif
 
 /**
  * Permet de retirer les espaces au debut et a la fin de la chaine\

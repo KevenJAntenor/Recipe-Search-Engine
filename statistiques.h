@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include "list.h"
 
+#ifndef LIST
+#include "list.h"
+#endif
 
 #define BUFFER 10000
 
@@ -18,6 +20,8 @@ struct stats {
     char *categorie_plus_grand_recettes;
     char *recettes_plus_longues;
 };
+
+void initialiser_statistiques(struct stats *statistiques);
 
 
 void generer_stats(char *fichier_entree, char *fichier_stats,struct liste_categories *categories);

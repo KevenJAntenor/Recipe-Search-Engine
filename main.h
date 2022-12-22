@@ -3,6 +3,8 @@
 
 #include "erreur.h"
 #include "fichier.h"
+#include "recherche.h"
+#include "statistiques.h"
 
 #define MSG_ERR_NB_ARGS "Nombre d'arguments invalide"
 #define MSG_ARGS_INVALIDE "Arguments invalides"

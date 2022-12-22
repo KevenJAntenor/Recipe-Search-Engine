@@ -3,7 +3,10 @@
 int main(int argc, char *argv[]){
    verifier_arguments(argc,argv);
    struct liste_categories *categories = lire_fichier(argv[1]);
-   printf("%d\n",categories->nb_categories);
+   if (argc == 4){
+      generer_stats(argv[1],argv[3],categories);
+   }
+   lancer_recherche(categories);
    return 0;
 }
 

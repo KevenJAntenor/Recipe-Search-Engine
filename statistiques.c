@@ -2,9 +2,22 @@
 
 void generer_stats(char *fichier_entree, char *fichier_stats,struct liste_categories *categories){
     struct stats statistiques;
+    initialiser_statistiques(&statistiques);
     generer_depuis_fichier(fichier_entree,&statistiques);
     generer_depuis_liste(categories, &statistiques);
     ecrire_statistiques(statistiques,fichier_stats);
+}
+
+void initialiser_statistiques(struct stats *statistiques){
+    statistiques->nb_lignes = 0;
+    statistiques->nb_mots_sans_doublons = 0;
+    statistiques->nb_mots_avec_doublons = 0;
+    statistiques->lettre_plus_frequente = 'A';
+    statistiques->nb_categories = 0;
+    statistiques->nb_recettes = 0;
+    statistiques->categorie_plus_populaire = "";
+    statistiques->categorie_plus_grand_recettes = "";
+    statistiques->recettes_plus_longues = "";
 }
 
 void generer_depuis_fichier(char *fichier_entree,struct stats *statistiques){
@@ -90,7 +103,7 @@ void trouver_recettes_plus_longue(struct liste_categories *categories,char *nom_
 
 void ecrire_statistiques(struct stats statistiques,char *fichier_stats){
     FILE *fp = fopen(fichier_stats,"w");
-    char *str;
+    char str[5000] = "";
     sprintf(str,"Nombre de lignes dans le fichier d'entrée: %i\nNombre de mots sans doublons: %i\nNombre de mots avec doublons: %i\nLettre la plus fréquente: %c\nNombre de catégories: %i\nNombre de recettes: %i\nCatégorie la plus populaire: %s\nCatégorie qui a le plus grand nombre de recettes: %s\nRecette la plus longue (en termes de nombre de caractères): %s",
     statistiques.nb_lignes,
     statistiques.nb_mots_sans_doublons,

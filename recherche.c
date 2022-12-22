@@ -71,7 +71,7 @@ int compter_nombre_espaces(char *chaineDeCaractere){
 }
 
 void traiter_entree_de_utilisateur(char *critereDeRecherche){
-    char *critere ; int i = 0 ;
+    char critere[150] ; int i = 0 ;
     strcpy(critere,enleve_espace_milieu(enleve_espace_deb_fin(critereDeRecherche))) ;
     while(i < strlen(critere)) {
         critere[i] = tolower(critere[i]) ;
@@ -86,10 +86,11 @@ void lancer_recherche(struct liste_categories *categories){
     do{
         printf("Entrez votre critère de recherche(ou sinon 'q' pour quitter) :") ;
         scanf("%s",(char *)&critereDeRecherche) ;
-        traiter_entree_de_utilisateur((char *)&critereDeRecherche) ;
-        if(compter_nombre_espaces(critereDeRecherche) >= 0 && compter_nombre_espaces(critereDeRecherche) < 2){
-            if(compter_nombre_espaces(critereDeRecherche) == 0) rechercher_par_categorie(categories,critereDeRecherche) ;
-            else(rechercher_par_categorie_et_mot_cle(categories,critereDeRecherche)) ;
-        }else printf("\nRecherche Invalide.\n") ;
+        traiter_entree_de_utilisateur(critereDeRecherche) ;
+        if (strcmp(critereDeRecherche,"q") != 0){
+           if(compter_nombre_espaces(critereDeRecherche) >= 0 && compter_nombre_espaces(critereDeRecherche) < 2){
+               if(compter_nombre_espaces(critereDeRecherche) == 0) rechercher_par_categorie(categories,critereDeRecherche) ;
+               else(rechercher_par_categorie_et_mot_cle(categories,critereDeRecherche)) ;
+        }else printf("\nRecherche Invalide.\n") ;}
     }while(strcmp(critereDeRecherche,"q") != 0) ;  
 }

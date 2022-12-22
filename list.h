@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define LIST
+
 struct recette {
    char *nom_recette;
    struct recette *suivant;

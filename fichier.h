@@ -7,7 +7,9 @@
 #include <stdbool.h>
 
 // INclusions avec ""
+#ifndef LIST
 #include "list.h"
+#endif
 
 // Declaration des fonctions publiques
 
