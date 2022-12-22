@@ -102,3 +102,11 @@ void ajouter_categorie(struct categorie *categorie, struct liste_categories *lis
    inserer_categorie(categorie,position,liste_categories);
    liste_categories->nb_categories++;
 }
+
+void afficher_categorie(struct categorie *categorie){
+   struct recette *courant = categorie->recettes->recettes;
+   while(courant != NULL){
+      printf("%s\n",courant->nom_recette);
+   }
+   printf(".\n");
+}

@@ -120,3 +120,9 @@ int trouver_position_categorie(char *nom_categorie, struct liste_categories *lis
  * @param liste_categories la liste de catefories ou ajouter la recette
 */
 void inserer_categorie(struct categorie *categorie, int position, struct liste_categories *liste_categories);
+
+/**
+ * Afficher les recettes d'une categore
+ * @param categorie la categorie dont on veut afficher des recettes
+*/
+void afficher_categorie(struct categorie *categorie);
