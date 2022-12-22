@@ -40,6 +40,8 @@ void trouver_categorie_plus_grand_recettes(struct liste_categories *categories, 
 
 void trouver_recettes_plus_longue(struct liste_categories *categories,char *nom_recette);
 
+void ecrire_statistiques(struct stats statistiques,char *fichier_stats);
+
 
 
 

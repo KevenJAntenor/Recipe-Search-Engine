@@ -4,6 +4,7 @@ void generer_stats(char *fichier_entree, char *fichier_stats,struct liste_catego
     struct stats statistiques;
     generer_depuis_fichier(fichier_entree,&statistiques);
     generer_depuis_liste(categories, &statistiques);
+    ecrire_statistiques(statistiques,fichier_stats);
 }
 
 void generer_depuis_fichier(char *fichier_entree,struct stats *statistiques){
@@ -85,4 +86,22 @@ void trouver_recettes_plus_longue(struct liste_categories *categories,char *nom_
        }
        courant_categorie = courant_categorie->suivant;
    }
+}
+
+void ecrire_statistiques(struct stats statistiques,char *fichier_stats){
+    FILE *fp = fopen(fichier_stats,"w");
+    char *str;
+    sprintf(str,"Nombre de lignes dans le fichier d'entrée: %i\nNombre de mots sans doublons: %i\nNombre de mots avec doublons: %i\nLettre la plus fréquente: %c\nNombre de catégories: %i\nNombre de recettes: %i\nCatégorie la plus populaire: %s\nCatégorie qui a le plus grand nombre de recettes: %s\nRecette la plus longue (en termes de nombre de caractères): %s",
+    statistiques.nb_lignes,
+    statistiques.nb_mots_sans_doublons,
+    statistiques.nb_mots_avec_doublons,
+    statistiques.lettre_plus_frequente,
+    statistiques.nb_categories,
+    statistiques.nb_recettes,
+    statistiques.categorie_plus_populaire,
+    statistiques.categorie_plus_grand_recettes,
+    statistiques.recettes_plus_longues);
+    fputs(str,fp);
+    fclose(fp);
+
 }
