@@ -4,7 +4,7 @@ void rechercher_par_categorie(struct liste_categories *categories, char *critere
     struct categorie *temp = categories->categories ; int i = 0 ; bool recherche = true ;
     while(i < categories->nb_categories && recherche ){
         if(strstr(critereDeRecherche,temp->nom_categorie) != NULL) {
-            //METHODE PRINT_RECETTES_CATEGORIE ;
+            afficher_categorie(temp) ;
             recherche = false ;
         }
         temp = temp->suivant ;
