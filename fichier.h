@@ -1,6 +1,3 @@
-#ifndef UNTITLED_FICHIER_H
-#define UNTITLED_FICHIER_H
-
 // Inclusions avec < >
 
 #include <stdio.h>
@@ -90,5 +87,3 @@ char *trouver_nom_categorie(char *ligne, int *index, char *nomCategorie) ;
  * @return struct liste_categories * : la liste des categories
 */
 struct liste_categories *lire_fichier(char *nom_fichier) ;
-
-#endif
