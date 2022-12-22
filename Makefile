@@ -4,7 +4,7 @@ EXE = recherche
 EXE_TEST = recherche_test
 
 .SUFFIXES = .h .c .o
-OBJS = main.o erreur.o list.o fichier.o recherche.o
+OBJS = main.o erreur.o list.o fichier.o recherche.o statistiques.o
 OBJS_TESTS = main_test.o list_test.o list.o
 
 all: clean build
