@@ -79,7 +79,7 @@ char *trouver_nom_recette(char *ligne, char *nomRecette) ;
  * @param nomCategorie le nom de la categorie
  * @return nom de la categorie
 */
-char *trouver_nom_categorie(char *ligne, int *index, char *nomCategorie) ;
+char *trouver_nom_categorie(char *ligne, int index, char *nomCategorie) ;
 
 /**
  * Genere la liste des categories
