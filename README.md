@@ -29,7 +29,7 @@ This project is a C program that enables recipe searching within a database. The
 - **`Makefile`**: Automates the build process.
 - **`stats.txt`**: Output file for statistics (if specified).
 
-## How to Run
+## 🚀 How to Run
 Follow these steps to compile and execute the program:
 
 ### 1. **Clone the Repository**
