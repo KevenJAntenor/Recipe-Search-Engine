@@ -20,7 +20,7 @@ This project is a C program that enables recipe searching within a database. The
 - **Testing Framework**:
   - Uses CUnit for unit testing with a required test coverage of at least 70%.
 
-## File Structure
+## 📁 File Structure
 - **`main.c`**: Contains the main logic for the program.
 - **`list.c`, `list.h`**: Manages linked list operations for categories and recipes.
 - **`statistiques.c`, `statistiques.h`**: Handles statistical analysis of the database.
